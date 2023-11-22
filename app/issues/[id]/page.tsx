@@ -20,7 +20,7 @@ const IssueDetailPage = async ({ params }: Props) => {
     notFound();
 
   return (
-    <div>
+    <div className='max-w-xl'>
       <Heading>{issue.title}</Heading>
       <Flex gap='3' my='2'>
         <IssueStatusBadge status={issue.status} />
