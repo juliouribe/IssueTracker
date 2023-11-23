@@ -9,7 +9,6 @@ import { Avatar, Box, Container, DropdownMenu, Flex, Text } from '@radix-ui/them
 import { Skeleton } from '@/app/components';
 
 const NavBar = () => {
-
   return (
     <nav className='border-b mb-5 px-5 py-3'>
       <Container>
@@ -30,7 +29,7 @@ const NavBar = () => {
 const AuthStatus = () => {
   const { status, data: session } = useSession();
 
-  if (status === 'loading') return <Skeleton width='3rem'/>;
+  if (status === 'loading') return <Skeleton width='3rem' />;
 
   if (status === 'unauthenticated')
     return <Link className='nav-link' href='/api/auth/signin'>Login</Link>
