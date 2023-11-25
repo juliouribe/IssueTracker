@@ -36,7 +36,7 @@ export async function PATCH(
     data: {
       title: body.title,
       description: body.description,
-      assignedToUser: body.assignedToUserId
+      assignedToUserId: body.assignedToUserId
     }
   })
   return NextResponse.json(updatedIssue)
