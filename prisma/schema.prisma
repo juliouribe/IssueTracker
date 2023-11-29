@@ -8,6 +8,8 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+  // Specifically for planetscale (something about foreign key constraints)
+  relationMode = "prisma"
 }
 
 model Issue {
